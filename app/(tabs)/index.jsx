@@ -5,11 +5,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   const [movieName, setMovieName] = useState('');
-  const [movieData, setMovieData] = useState<{
-    Poster: string;
-    Title: string;
-    Plot: string;
-  } | null>(null);
+  const [movieData, setMovieData] = useState(null);
   const [error, setError] = useState('');
 
   const fetchMovieData = async () => {
