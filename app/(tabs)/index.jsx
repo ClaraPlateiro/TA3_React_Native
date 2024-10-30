@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, Button, View, Text, Image } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { GestureHandlerRootView, ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
@@ -34,6 +34,7 @@ export default function App() {
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaProvider>
         <SafeAreaView>
+        <ScrollView>
         <Text style={styles.title}>Buscador de películas</Text>
           <TextInput
             placeholder="Buscar película..."
@@ -50,6 +51,7 @@ export default function App() {
               <Text style={styles.plot}>{movieData.Plot}</Text>
             </View>
           )}
+        </ScrollView>
         </SafeAreaView>
       </SafeAreaProvider>
     </GestureHandlerRootView>
