@@ -38,6 +38,7 @@ export default function App() {
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaProvider>
         <SafeAreaView>
+        <Text style={styles.title}>Buscador de películas</Text>
           <TextInput
             placeholder="Buscar película..."
             value={movieName}
